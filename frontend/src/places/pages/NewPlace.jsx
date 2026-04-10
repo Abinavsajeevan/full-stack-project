@@ -1,7 +1,15 @@
 import React from "react";
 
+import Input from "../../shared/components/FormElements/Input";
+import './NewPlace.css'
+import { VALIDATOR_REQUIRE } from "../../shared/components/util/validators";
+
 const NewPLace = () => {
-    return <h1>New Place work!</h1>
+    return (
+        <form  className="place-form">
+            <Input element='input' type='text' label='Title' validators={[VALIDATOR_REQUIRE()]} errorText="Please enter a valid title." />
+        </form>
+    )
 }
 
 export default NewPLace
